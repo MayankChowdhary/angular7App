@@ -1,0 +1,54 @@
+
+<div class="containerlt">
+  <div class="addTagBox">
+    <div class = "tp-container">
+      <mat-form-field appearance = "standard">
+         <input matInput  [(ngModel)]="addTagText" (keydown.enter)="UpdateText()" placeholder = "Add tag">
+        <!-- <mat-hint >{{addTagInput}} </mat-hint>-->
+      </mat-form-field>
+      <br>
+      <button mat-raised-button (click)="UpdateText()">ADD</button>
+   </div>
+  </div>
+</div>
+
+<div class="containerrt">
+  <div class="tagInputBox">
+  
+  <p>Tagging Input Field. Press enter to add item</p>
+
+  <ng-select 
+      [items]=[]
+      [addTag]="true"
+      [multiple]="true"
+      [selectOnTab]="true"
+      [isOpen]="false" 
+      [(ngModel)]="tagInputText"
+  
+      >
+  </ng-select>
+  <button mat-raised-button (click)="onSubmitText()">SUBMIT</button>
+</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="imageView" *ngIf="isShown">
+  <img src={{image}} alt="LodingImage">
+  <div class="scroll">
+  <ul style="list-style-type:none">
+  <li  *ngFor="let links of resultLinks">
+  <a href="links">{{links}}</a>
+  </li>
+  </ul>
+  </div>
+  <button mat-icon-button id="cancelimg" (click)="onCancelImage()">
+    <mat-icon aria-label="cancel">cancel</mat-icon>
+ </button>
+  <br>
+  <button mat-raised-button  id="saveimg" (click)="onSaveImage()">Save</button>
+  
+ </div>
+
+
+ 
+ 

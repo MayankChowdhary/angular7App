@@ -1,0 +1,78 @@
+.containerrt{
+
+    float:right; 
+    background:#acacff; 
+    width:50%; 
+    height:280px; 
+}
+
+.tagInputBox{
+
+    width: 25em;
+    text-align: start;
+    align-content: flex-end;
+    margin: auto;
+    
+}
+
+.containerlt{
+
+    float:left;  
+    background:rgb(255, 154, 188); 
+    width:50%; 
+    height:280px; 
+}
+.addTagBox{
+
+    width: 20em;
+    text-align: start;
+    align-content: flex-start;
+    margin: auto; 
+}
+
+.imageView{
+    margin: auto;
+    background:rgb(255, 255, 255); 
+    width: fit-content;; 
+    height: fit-content;
+    
+    
+
+}
+.imageView img{
+    margin: auto;
+    background:#ffffff; 
+    width:300px; 
+    height:300px; 
+    vertical-align: middle;
+    border: 2px solid rgb(148, 148, 148);
+    
+}
+#saveimg{
+    float:right;
+    margin-right: 40px;
+}
+#cancelimg{
+    float: right;
+    margin-top: -10px;
+}
+
+div.scroll {
+    vertical-align: middle;
+    align-content: center;
+    margin-inline-start: 3rem;
+    background-color: #ffffff;
+    width: 600px;
+    height: 300px;
+    font-size: medium;
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    border: 2px solid rgb(148, 148, 148);
+  };
+
+
