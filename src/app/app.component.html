@@ -35,6 +35,9 @@
 <div class="imageView" *ngIf="isShown">
   <img src={{image}} alt="LodingImage">
   <div class="scroll">
+  <div class="LinkLoad" *ngIf="isLinkLoad">
+  <img src={{imagex}} alt="LodingLinks...">
+</div>
   <ul style="list-style-type:none">
   <li  *ngFor="let links of resultLinks">
   <a href="links">{{links}}</a>

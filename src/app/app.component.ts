@@ -10,7 +10,8 @@ export class AppComponent implements OnInit {
  tagInputText: string[] = ['Apple', 'Orange', 'Banana']; 
  resultLinks: string[] = ['Loading...']; 
  image : any = "assets/images/loding_animation.gif";
-
+ imagex : any = "assets/images/loding_animation.gif";
+ isLinkLoad: boolean = true;
  isShown: boolean = false ;
 
 
@@ -30,6 +31,7 @@ export class AppComponent implements OnInit {
     if(this.tagInputText.length===0){
     alert("Search is empty!");
     }else{
+    this.isLinkLoad = true;
     this.tagInputText=[];
     this.isShown = true;
     this.resultLinks = ['Loading...']; 
@@ -37,7 +39,8 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.image="assets/images/matrix.jpg";
       this.resultLinks=['https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact', 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact', 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact','https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact'];
-  }, 5000);
+      this.isLinkLoad = false;
+    }, 5000);
   }
 }
   onSaveImage(){
